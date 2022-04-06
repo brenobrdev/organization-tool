@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Breno's Agenda</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <nav class="nav-bar">
+      <input
+        type="text"
+        class="text-field tx-study"
+        placeholder="Study"
+        id="study-textfield"
+      />
+      <input
+        type="text"
+        class="text-field tx-category"
+        placeholder="Category"
+        id="category-textfield"
+      />
+      <input
+        type="text"
+        class="text-field tx-patient"
+        placeholder="Patient"
+        id="patient-textfield"
+      />
+      <input
+        type="text"
+        class="text-field tx-task"
+        placeholder="Task"
+        id="task-textfield"
+      />
+      <input
+        type="date"
+        class="text-field tx-due-date"
+        placeholder="Due Date"
+        id="due-date-textfield"
+      />
+      <button class="btn btn-add" id="btn-add">Add New Task</button>
+      <p class="task-added invisible" id="alert-add-task">Task Added!</p>
+    </nav>
+
+    <!-- <div class="checklist card">
+    <div class="checklist-item">
+        <input type="checkbox">Check Future Scans
+    </div>
+    <div class="checklist-item">
+        <input type="checkbox">Check Future Scans
+    </div>
+    <div class="checklist-item">
+        <input type="checkbox">Check Future Scans
+    </div>
+</div> -->
+
+    <div class="main-container">
+      <div class="card todos">
+        <div class="buttons-todo">
+          <button class="btn btn-sort" value="sort-date">Sort By Date</button>
+          <button class="btn btn-sort" value="sort-study">Sort By Study</button>
+          <button class="btn btn-sort" value="sort-category">
+            Sort By Category
+          </button>
+        </div>
+        <div class="task-list" id="task-list"></div>
+      </div>
+      <div class="card notes-1">
+        <h1>Notes</h1>
+        <textarea id="notes-1-text" class="text-area"></textarea>
+      </div>
+      <div class="card notes-2">
+        <h1>Notes</h1>
+        <textarea id="notes-2-text" class="text-area"></textarea>
+      </div>
+      <div class="card notes-3">
+        <h1>Notes</h1>
+        <textarea id="notes-3-text" class="text-area"></textarea>
+      </div>
+      <div class="card metrics">
+        <h1>Metrics</h1>
+        <textarea id="metrics-text" class="text-area"></textarea>
+      </div>
+      <div class="card financial-tracker">
+        <h1>Financial Tracker</h1>
+        <textarea id="financial-tracker-text" class="text-area"></textarea>
+      </div>
+      <div class="card notes-4">
+        <h1>Notes</h1>
+        <textarea id="notes-4-text" class="text-area"></textarea>
+      </div>
+      <div class="card deadlines">
+        <h1>Deadlines</h1>
+        <textarea id="deadlines-text" class="text-area"></textarea>
+      </div>
+      <div class="card notes-5">
+        <h1>Notes</h1>
+        <textarea id="notes-5-text" class="text-area"></textarea>
+      </div>
+      <div class="card notes-6">
+        <h1>Notes</h1>
+        <textarea id="notes-6-text" class="text-area"></textarea>
+      </div>
+      <div class="card notes-7">
+        <h1>Notes</h1>
+        <textarea id="notes-7-text" class="text-area"></textarea>
+      </div>
+      <div class="card notes-8">
+        <h1>Notes</h1>
+        <textarea id="notes-8-text" class="text-area"></textarea>
+      </div>
+      <div class="card notes-9">
+        <h1>Notes</h1>
+        <textarea id="notes-9-text" class="text-area"></textarea>
+      </div>
+      <div class="card notes-10">
+        <h1>Notes</h1>
+        <textarea id="notes-10-text" class="text-area"></textarea>
+      </div>
+      <div class="card notes-11">
+        <h1>Notes</h1>
+        <textarea id="notes-11-text" class="text-area"></textarea>
+      </div>
+      <div class="card notes-12">
+        <h1>Notes</h1>
+        <textarea id="notes-12-text" class="text-area"></textarea>
+      </div>
+      <div class="card notes-13">
+        <h1>Notes</h1>
+        <textarea id="notes-13-text" class="text-area"></textarea>
+      </div>
+      <div class="card notes-14">
+        <h1>Notes</h1>
+        <textarea id="notes-14-text" class="text-area"></textarea>
+      </div>
+      <div class="card notes-15">
+        <h1>Notes</h1>
+        <textarea id="notes-15-text" class="text-area"></textarea>
+      </div>
+      <div class="card notes-16">
+        <h1>Notes</h1>
+        <textarea id="notes-16-text" class="text-area"></textarea>
+      </div>
+      <div class="card notes-17">
+        <h1>Notes</h1>
+        <textarea id="notes-17-text" class="text-area"></textarea>
+      </div>
+      <div class="card notes-18">
+        <h1>Notes</h1>
+        <textarea id="notes-18-text" class="text-area"></textarea>
+      </div>
+    </div>
+
+    <script defer src="todos.js"></script>
+    <script defer src="notes.js"></script>
+  </body>
+</html>
